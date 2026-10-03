@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!-- package.xml —— status_interfaces 功能包清单 -->
+<package format="3">
+  <name>status_interfaces</name>
+  <version>0.0.0</version>
+  <description>自定义系统状态消息接口（CPU、内存、网卡收发数据）</description>
+  <maintainer email="student@example.com">student</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- 使用 ament_cmake 作为构建工具 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- 编译期：消息代码生成器 -->
+  <build_depend>rosidl_default_generators</build_depend>
+  <!-- 运行期：消息运行时支持 -->
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- 消息中引用了 std_msgs/Header -->
+  <depend>std_msgs</depend>
+
+  <!-- 声明本包属于“接口包”分组，colcon 会据此调整编译顺序 -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

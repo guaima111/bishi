@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!-- package.xml —— status_display 功能包清单 -->
+<package format="3">
+  <name>status_display</name>
+  <version>0.0.0</version>
+  <description>使用 psutil 采集系统状态（CPU/内存/网卡），并通过 PySide2 窗口实时显示</description>
+  <maintainer email="student@example.com">student</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Python 包使用 ament_python 构建 -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- ROS2 Python 客户端库 -->
+  <exec_depend>rclpy</exec_depend>
+  <!-- 依赖自己定义的消息包 -->
+  <exec_depend>status_interfaces</exec_depend>
+  <!-- psutil：采集系统状态的 Python 库（apt 安装：python3-psutil） -->
+  <exec_depend>python3-psutil</exec_depend>
+  <!-- PySide2：Qt 的 Python 绑定，提供窗口控件（apt 安装：python3-pyside2.qtwidgets） -->
+  <exec_depend>python3-pyside2.qtwidgets</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
